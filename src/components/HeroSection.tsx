@@ -17,33 +17,32 @@ const HeroSection = () => {
             <img 
               src="/lovable-uploads/ee56a0b5-859e-4872-83ba-0ef2b23cb050.png"
               alt="Bibek Parajuli"
-              className="w-full h-full object-cover rounded-full"
             />
           </div>
         </div>
 
         {/* Main Heading */}
         <div className="space-y-4">
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground">
+          <h1 className="text-5xl md:text-7xl font-bold violet-white-gradient">
             Hello! I Am{' '}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="violet-white-gradient">
               Bibek Parajuli
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-2xl mx-auto">
-            Aspiring <span className="text-primary font-medium">Software Engineer</span> and{' '}
-            <span className="text-accent font-medium">Java Developer</span>
+          <p className="text-xl md:text-2xl violet-white-gradient font-light max-w-2xl mx-auto">
+            Aspiring <span className="violet-white-gradient font-medium">Software Engineer</span> and{' '}
+            <span className="violet-white-gradient font-medium">Java Developer</span>
           </p>
         </div>
 
         {/* Motivational Quote */}
         <div className="space-y-3 max-w-3xl mx-auto">
-          <blockquote className="text-lg md:text-xl text-foreground/80 italic font-light">
-            "Code is like humor. When you have to explain it, it's bad."
+          <blockquote className="text-lg md:text-xl violet-white-gradient italic font-light">
+            "Strive not to be a success, but rather to be of value."
           </blockquote>
-          <p className="text-base text-muted-foreground">
-            Passionate about creating efficient solutions and connecting talent with opportunities
+          <p className="text-base violet-white-gradient">
+            Also I am working as a Technical Recruiter in US IT Staffing.
           </p>
         </div>
       </div>
