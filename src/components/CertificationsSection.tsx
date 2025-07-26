@@ -37,7 +37,7 @@ const CertificationsSection = () => {
   return (
     <section id="certifications" className="py-20 px-6">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 violet-white-gradient">
           Certifications
         </h2>
 
@@ -50,17 +50,17 @@ const CertificationsSection = () => {
             >
               <div className="flex justify-between items-start mb-4">
                 <div className="flex-1">
-                  <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg font-bold violet-white-gradient mb-2 group-hover:text-primary transition-colors">
                     {cert.title}
                   </h3>
-                  <p className="text-primary font-medium text-sm mb-2">
+                  <p className="violet-white-gradient font-medium text-sm mb-2">
                     {cert.provider}
                   </p>
                 </div>
                 <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 ml-2" />
               </div>
               
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="violet-white-gradient text-sm leading-relaxed">
                 {cert.description}
               </p>
             </div>

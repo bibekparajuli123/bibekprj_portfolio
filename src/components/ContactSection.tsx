@@ -28,11 +28,11 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 px-6">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 violet-white-gradient">
           Let's Connect
         </h2>
         
-        <p className="text-center text-muted-foreground mb-16 text-lg max-w-2xl mx-auto">
+        <p className="text-center violet-white-gradient mb-16 text-lg max-w-2xl mx-auto">
           Ready to collaborate or discuss opportunities? Feel free to reach out through any of these channels.
         </p>
 
@@ -52,11 +52,11 @@ const ContactSection = () => {
                   <IconComponent className="w-8 h-8" />
                 </div>
                 
-                <h3 className="text-lg font-bold text-foreground mb-2">
+                <h3 className="text-lg font-bold violet-white-gradient mb-2">
                   {method.label}
                 </h3>
                 
-                <p className="text-muted-foreground text-sm group-hover:text-primary transition-colors">
+                <p className="violet-white-gradient text-sm group-hover:text-primary transition-colors">
                   {method.value}
                 </p>
               </a>
@@ -66,7 +66,7 @@ const ContactSection = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <p className="text-muted-foreground mb-6">
+          <p className="violet-white-gradient mb-6">
             Open to full-time opportunities, freelance projects, and collaboration
           </p>
           <a 

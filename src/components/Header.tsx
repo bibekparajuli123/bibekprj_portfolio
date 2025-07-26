@@ -29,26 +29,26 @@ const Header = () => {
           <div className="flex space-x-8">
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              className="violet-white-gradient hover:text-primary transition-colors duration-300 font-medium"
             >
               Home
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              className="violet-white-gradient hover:text-primary transition-colors duration-300 font-medium"
             >
               About
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              className="violet-white-gradient hover:text-primary transition-colors duration-300 font-medium"
             >
               Connect
             </button>
           </div>
 
           {/* Logo */}
-          <div className="text-xl font-bold text-primary">
+          <div className="text-xl font-bold violet-white-gradient">
             BP
           </div>
         </div>

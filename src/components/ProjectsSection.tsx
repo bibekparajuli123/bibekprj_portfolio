@@ -34,7 +34,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-20 px-6 bg-secondary/30">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 violet-white-gradient">
           Featured Projects
         </h2>
 
@@ -47,13 +47,13 @@ const ProjectsSection = () => {
               {/* Project Header */}
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h3 className="text-xl font-bold text-foreground mb-1">
+                  <h3 className="text-xl font-bold violet-white-gradient mb-1">
                     {project.title}
                   </h3>
                   <div className="flex items-center space-x-2 text-sm">
-                    <span className="text-primary font-medium">{project.tech}</span>
-                    <span className="text-muted-foreground">•</span>
-                    <span className="text-muted-foreground">{project.date}</span>
+                    <span className="violet-white-gradient font-medium">{project.tech}</span>
+                    <span className="violet-white-gradient">•</span>
+                    <span className="violet-white-gradient">{project.date}</span>
                   </div>
                 </div>
                 
@@ -77,18 +77,18 @@ const ProjectsSection = () => {
               </div>
 
               {/* Project Description */}
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+              <p className="violet-white-gradient text-sm leading-relaxed mb-4">
                 {project.description}
               </p>
 
               {/* Project Features */}
               <div className="space-y-2">
-                <h4 className="text-sm font-medium text-foreground">Key Features:</h4>
+                <h4 className="text-sm font-medium violet-white-gradient">Key Features:</h4>
                 <ul className="space-y-1">
                   {project.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start text-xs">
                       <span className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
-                      <span className="text-muted-foreground">{feature}</span>
+                      <span className="violet-white-gradient">{feature}</span>
                     </li>
                   ))}
                 </ul>

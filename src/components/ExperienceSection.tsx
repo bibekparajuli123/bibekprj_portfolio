@@ -45,7 +45,7 @@ const ExperienceSection = () => {
   return (
     <section id="experience" className="py-20 px-6">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 violet-white-gradient">
           Professional Experience
         </h2>
 
@@ -57,10 +57,10 @@ const ExperienceSection = () => {
             >
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-foreground mb-2">
+                  <h3 className="text-2xl font-bold violet-white-gradient mb-2">
                     {exp.title}
                   </h3>
-                  <p className="text-xl text-primary font-medium">
+                  <p className="text-xl violet-white-gradient font-medium">
                     {exp.company}
                   </p>
                 </div>
@@ -73,7 +73,7 @@ const ExperienceSection = () => {
                 {exp.responsibilities.map((responsibility, idx) => (
                   <li key={idx} className="flex items-start">
                     <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span className="text-muted-foreground leading-relaxed">
+                    <span className="violet-white-gradient leading-relaxed">
                       {responsibility}
                     </span>
                   </li>

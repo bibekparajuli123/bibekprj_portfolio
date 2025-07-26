@@ -26,7 +26,7 @@ const EducationSection = () => {
   return (
     <section id="education" className="py-20 px-6 bg-secondary/30">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 violet-white-gradient">
           Education
         </h2>
 
@@ -40,13 +40,13 @@ const EducationSection = () => {
             >
               <div className="flex flex-col md:flex-row md:justify-between md:items-start">
                 <div className="flex-1">
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
+                  <h3 className="text-xl md:text-2xl font-bold violet-white-gradient mb-2">
                     {edu.degree}
                   </h3>
-                  <p className="text-lg text-primary font-medium mb-1">
+                  <p className="text-lg violet-white-gradient font-medium mb-1">
                     {edu.institution}
                   </p>
-                  <p className="text-muted-foreground">
+                  <p className="violet-white-gradient">
                     {edu.period}
                   </p>
                 </div>
