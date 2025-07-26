@@ -1,40 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Portfolio Design System - Deep Purple Theme with Modern Gradients */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Deep Purple Portfolio Theme */
+    --background: 270 15% 8%;
+    --foreground: 270 15% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 270 15% 12%;
+    --card-foreground: 270 15% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 270 15% 12%;
+    --popover-foreground: 270 15% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Purple accent colors */
+    --primary: 270 80% 60%;
+    --primary-foreground: 270 15% 95%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 270 15% 18%;
+    --secondary-foreground: 270 15% 85%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 270 15% 15%;
+    --muted-foreground: 270 10% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 280 100% 70%;
+    --accent-foreground: 270 15% 8%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 270 15% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 270 15% 20%;
+    --input: 270 15% 18%;
+    --ring: 270 80% 60%;
+
+    /* Portfolio specific colors */
+    --hero-gradient-start: 270 100% 25%;
+    --hero-gradient-end: 290 100% 15%;
+    --glow-purple: 270 100% 70%;
+    --glow-pink: 320 100% 75%;
 
     --radius: 0.5rem;
 
@@ -100,6 +108,109 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-poppins;
+    background: linear-gradient(135deg, hsl(var(--hero-gradient-start)), hsl(var(--hero-gradient-end)));
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Hero section gradient */
+  .hero-gradient {
+    background: linear-gradient(135deg, 
+      hsl(var(--hero-gradient-start)) 0%, 
+      hsl(var(--hero-gradient-end)) 100%);
+  }
+  
+  /* Glowing profile image animation */
+  .profile-glow {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .profile-glow::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, 
+      hsl(var(--glow-purple)), 
+      hsl(var(--glow-pink)), 
+      hsl(var(--glow-purple)));
+    background-size: 300% 300%;
+    animation: glowing 3s ease-in-out infinite;
+    z-index: -1;
+  }
+  
+  @keyframes glowing {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  /* Glass morphism effect */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Scroll animations */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .fade-in-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Bounce arrow animation */
+  .bounce-arrow {
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+  }
+  
+  /* Hover glow effects */
+  .hover-glow {
+    transition: all 0.3s ease;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+    transform: translateY(-2px);
+  }
+  
+  /* Scroll to top button */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    background: hsl(var(--primary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px hsl(var(--primary) / 0.3);
+    z-index: 1000;
+  }
+  
+  .scroll-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px hsl(var(--primary) / 0.5);
   }
 }
