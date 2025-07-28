@@ -10,30 +10,30 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="min-h-screen hero-gradient relative">
-      <div className="container mx-auto px-6 h-screen flex items-center">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+      <div className="container mx-auto px-4 sm:px-6 h-screen flex items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
             {/* Main Heading */}
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-7xl font-bold violet-white-gradient leading-tight">
+              <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold violet-white-gradient leading-tight">
                 Hello! I Am{' '}
                 <span className="violet-white-gradient block">
                   Bibek Parajuli.
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl gray-text font-light max-w-2xl">
+              <p className="text-lg sm:text-xl lg:text-2xl gray-text font-light max-w-2xl mx-auto lg:mx-0">
                 Aspiring software engineer and Java developer.
               </p>
             </div>
 
             {/* Motivational Quote */}
-            <div className="space-y-3 max-w-3xl">
-              <blockquote className="text-lg md:text-xl violet-white-gradient italic font-light">
+            <div className="space-y-3 max-w-3xl mx-auto lg:mx-0">
+              <blockquote className="text-base sm:text-lg lg:text-xl violet-white-gradient italic font-light">
                 "Strive not to be a success, but rather to be of value."
               </blockquote>
-              <p className="text-base gray-text">
+              <p className="text-sm sm:text-base gray-text">
                 Also I am working as a Technical Recruiter in US IT Staffing.
               </p>
             </div>
@@ -42,7 +42,7 @@ const HeroSection = () => {
           {/* Right Content - Profile Image */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="profile-glow w-80 h-80">
+              <div className="profile-glow w-60 h-60 sm:w-72 sm:h-72 lg:w-80 lg:h-80">
                 <img 
                   src="/lovable-uploads/ee56a0b5-859e-4872-83ba-0ef2b23cb050.png"
                   alt="Bibek Parajuli"
@@ -59,7 +59,7 @@ const HeroSection = () => {
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 bounce-arrow hover-glow p-3 rounded-full glass-effect"
         aria-label="Scroll to next section"
       >
-        <ChevronDown className="w-8 h-8 text-primary" />
+        <ChevronDown className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
       </button>
     </section>
   );

@@ -3,95 +3,72 @@ import { Github, ExternalLink } from 'lucide-react';
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Poshak",
+      title: "Poshak - Nepali Traditional Fashion App",
       tech: "Flutter/Dart",
-      date: "2023",
-      description: "Traditional Nepali fashion e-commerce app with cultural design elements, wishlist functionality, secure authentication, and modern UI/UX focused on traditional clothing market.",
-      features: ["E-commerce functionality", "Cultural UI design", "Wishlist & favorites", "Secure authentication", "Traditional fashion focus"],
-      github: "#",
-      demo: "#"
+      date: "June 2025",
+      description: "An e-commerce app for traditional Nepali attire, featuring authentication, wishlists, and a custom UI/theme.",
+      github: "#"
     },
     {
-      title: "Khaja Express",
+      title: "Khaja Express - Nepali Food Ordering App", 
       tech: "Flutter/Dart",
-      date: "2023",
-      description: "Modern food ordering application with seamless login/signup flow, shopping cart management, coupon system, and intuitive user experience for food delivery services.",
-      features: ["User authentication", "Shopping cart", "Coupon system", "Modern UI flow", "Food ordering workflow"],
-      github: "#",
-      demo: "#"
+      date: "May 2025",
+      description: "A food delivery app for browsing and ordering Nepali cuisine, with login/signup, shopping cart, and coupon features.",
+      github: "#"
     },
     {
       title: "Car Rental System",
-      tech: "Java/OOP",
-      date: "2022",
-      description: "Console-based car rental management system built with object-oriented programming principles, featuring modular design and comprehensive car fleet management capabilities.",
-      features: ["OOP principles", "Modular design", "Car fleet management", "Console interface", "Rental tracking"],
-      github: "#",
-      demo: "#"
+      tech: "Java/OOP", 
+      date: "Nov 2024",
+      description: "A console-based car rental application applying key Object-Oriented Programming principles like encapsulation, inheritance, and polymorphism.",
+      github: "#"
     }
   ];
 
   return (
-    <section id="projects" className="py-20 px-6 bg-secondary/30">
-      <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 violet-white-gradient">
-          Featured Projects
+    <section id="projects" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-secondary/30">
+      <div className="container mx-auto max-w-7xl">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 sm:mb-16 violet-white-gradient">
+          Projects
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="fade-in-up glass-effect rounded-2xl p-6 hover-glow group"
+              className="fade-in-up glass-effect rounded-2xl overflow-hidden hover-glow group"
             >
-              {/* Project Header */}
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h3 className="text-xl font-bold violet-white-gradient mb-1">
-                    {project.title}
-                  </h3>
-                  <div className="flex items-center space-x-2 text-sm">
-                    <span className="violet-white-gradient font-medium">{project.tech}</span>
-                    <span className="violet-white-gradient">•</span>
-                    <span className="violet-white-gradient">{project.date}</span>
-                  </div>
-                </div>
-                
-                {/* Action Buttons */}
-                <div className="flex space-x-2">
-                  <button 
-                    onClick={() => window.open(project.github, '_blank')}
-                    className="p-2 rounded-lg glass-effect hover-glow transition-all"
-                    title="View Code"
-                  >
-                    <Github className="w-4 h-4 text-muted-foreground hover:text-primary" />
-                  </button>
-                  <button 
-                    onClick={() => window.open(project.demo, '_blank')}
-                    className="p-2 rounded-lg glass-effect hover-glow transition-all"
-                    title="Live Demo"
-                  >
-                    <ExternalLink className="w-4 h-4 text-muted-foreground hover:text-primary" />
-                  </button>
-                </div>
+              {/* Project Image Placeholder */}
+              <div className="w-full h-48 sm:h-56 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                <span className="text-gray-500 text-lg font-medium">600 × 400</span>
               </div>
 
-              {/* Project Description */}
-              <p className="violet-white-gradient text-sm leading-relaxed mb-4">
-                {project.description}
-              </p>
+              {/* Project Content */}
+              <div className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold violet-white-gradient mb-3">
+                  {project.title}
+                </h3>
+                
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs font-medium">
+                    {project.tech}
+                  </span>
+                  <span className="px-3 py-1 bg-secondary/50 text-muted-foreground rounded-full text-xs">
+                    {project.date}
+                  </span>
+                </div>
 
-              {/* Project Features */}
-              <div className="space-y-2">
-                <h4 className="text-sm font-medium violet-white-gradient">Key Features:</h4>
-                <ul className="space-y-1">
-                  {project.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start text-xs">
-                      <span className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
-                      <span className="violet-white-gradient">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                  {project.description}
+                </p>
+
+                <button 
+                  onClick={() => window.open(project.github, '_blank')}
+                  className="w-full flex items-center justify-center gap-2 p-3 rounded-lg glass-effect hover-glow transition-all text-sm font-medium violet-white-gradient"
+                >
+                  <Github className="w-4 h-4" />
+                  View on GitHub
+                </button>
               </div>
             </div>
           ))}

@@ -15,6 +15,12 @@ const CertificationsSection = () => {
       description: "Advanced DSA concepts and problem-solving techniques"
     },
     {
+      title: "Problem Solving Basic Certification",
+      provider: "HackerRank",
+      link: "#",
+      description: "Data Structures Problem solving using java."
+    },
+    {
       title: "Inbound Marketing Certification Course",
       provider: "HubSpot",
       link: "#",
@@ -35,22 +41,22 @@ const CertificationsSection = () => {
   ];
 
   return (
-    <section id="certifications" className="py-20 px-6">
+    <section id="certifications" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 violet-white-gradient">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 sm:mb-16 violet-white-gradient">
           Certifications
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {certifications.map((cert, index) => (
             <div 
               key={index}
-              className="fade-in-up glass-effect rounded-2xl p-6 hover-glow group cursor-pointer"
+              className="fade-in-up glass-effect rounded-2xl p-4 sm:p-6 hover-glow group cursor-pointer"
               onClick={() => window.open(cert.link, '_blank')}
             >
               <div className="flex justify-between items-start mb-4">
                 <div className="flex-1">
-                  <h3 className="text-lg font-bold violet-white-gradient mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-base sm:text-lg font-bold violet-white-gradient mb-2 group-hover:text-primary transition-colors">
                     {cert.title}
                   </h3>
                   <p className="violet-white-gradient font-medium text-sm mb-2">

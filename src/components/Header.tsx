@@ -1,7 +1,18 @@
 import { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navItems = [
+    { name: 'Home', href: '#home' },
+    { name: 'Experience', href: '#about' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Education', href: '#education' },
+    { name: 'Certifications', href: '#certifications' },
+    { name: 'Connect', href: '#contact' }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,64 +23,63 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'glass-effect shadow-lg' : 'bg-transparent'
-    }`}>
-      <nav className="container mx-auto px-6 py-6">
-        <div className="flex justify-between items-center">
+    <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+      <nav className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
-            <span className="text-white font-bold text-lg">BP</span>
+          <div className="profile-glow w-8 h-8 sm:w-10 sm:h-10">
+            <img
+              src="/lovable-uploads/ee56a0b5-859e-4872-83ba-0ef2b23cb050.png"
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
           </div>
 
-          {/* Navigation Links */}
-          <div className="flex space-x-8">
-            <button 
-              onClick={() => scrollToSection('home')}
-              className="gray-text hover:text-primary transition-colors duration-300 font-medium"
-            >
-              Home
-            </button>
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="gray-text hover:text-primary transition-colors duration-300 font-medium"
-            >
-              Experience
-            </button>
-            <button 
-              onClick={() => scrollToSection('projects')}
-              className="gray-text hover:text-primary transition-colors duration-300 font-medium"
-            >
-              Projects
-            </button>
-            <button 
-              onClick={() => scrollToSection('education')}
-              className="gray-text hover:text-primary transition-colors duration-300 font-medium"
-            >
-              Education
-            </button>
-            <button 
-              onClick={() => scrollToSection('certifications')}
-              className="gray-text hover:text-primary transition-colors duration-300 font-medium"
-            >
-              Certifications
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="gray-text hover:text-primary transition-colors duration-300 font-medium"
-            >
-              Connect
-            </button>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-sm font-medium violet-white-gradient hover:text-primary transition-colors"
+              >
+                {item.name}
+              </a>
+            ))}
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 rounded-lg glass-effect"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? (
+              <X className="w-5 h-5 violet-white-gradient" />
+            ) : (
+              <Menu className="w-5 h-5 violet-white-gradient" />
+            )}
+          </button>
         </div>
+
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="md:hidden mt-4 py-4 glass-effect rounded-lg">
+            <div className="flex flex-col space-y-4 px-4">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-sm font-medium violet-white-gradient hover:text-primary transition-colors"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   );
