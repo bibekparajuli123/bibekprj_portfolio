@@ -1,73 +1,76 @@
-# Welcome to your Lovable project
+Bibek Parajuli – Personal Developer Portfolio
+A modern, elegant, and interactive portfolio website for showcasing skills, experience, and projects. Crafted with love and curated AI assistance for a captivating online presence.
 
-## Project info
+✨ About the Project
+This portfolio is a feature-rich, visually stunning personal website created for Bibek Parajuli, an aspiring software engineer and Java developer from Nepal. Designed for impact, clarity, and professionalism, the portfolio not only acts as a digital résumé but also as a live showcase of technical talents, project work, and personal branding. The structure and design reimagine the modern developer’s personal site, with special attention to authentic style, usability, and responsiveness.
 
-**URL**: https://lovable.dev/projects/2d324025-333f-4a3c-b8a4-97ba89962a6d
+🎨 Key Highlights
+Visually Striking Hero Section
+A split-screen layout centers "Hello! I am Bibek Parajuli" and core details on the left, while a circular, purple-glowing profile frame floats on the right. Typography and layout are chosen for instant recognition and professionalism.
 
-## How can I edit this code?
+Glassy, Purpled Experience Cards
+Experience is presented in modern glassmorphism-inspired cards with a strong purple palette, echoing the developer’s personal brand and favorite hues.
 
-There are several ways of editing your application.
+Responsive & Accessible
+Every pixel and section is optimized for desktop, tablet, and mobile, ensuring accessibility and readability.
 
-**Use Lovable**
+Silky, Dark Gradient Background
+A luxurious, smooth gradient from deep violet to near-black sets an immersive, elegant mood—clean, subtle, and cutting-edge.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2d324025-333f-4a3c-b8a4-97ba89962a6d) and start prompting.
+Animated UI and Floating Effects
+Smooth reveals, glows, button floats, and header transitions keep the experience lively and interactive without distraction.
 
-Changes made via Lovable will be committed automatically to this repo.
+Hand-Crafted With AI-Led Care
+This portfolio was made "with love," drawing on both personal vision and the meticulous guidance of advanced AI recommendations—integrating technical best practices, modern CSS, and the latest UX trends.
 
-**Use your preferred IDE**
+🛠️ Tech Stack
+HTML5 — Semantic, scalable markup.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+CSS3 — Responsive Flexbox/Grid layouts, gradient backgrounds, glass effects, animations, and glowing elements.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+JavaScript (ES6+) — For scroll animations, navigation highlighting, and interactive buttons.
 
-Follow these steps:
+Fonts — Poppins for modern, readable sans-serif appeal.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+🚀 Features
+Elegant header with a stylized "B" logo and right-aligned navigation.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Split hero section for instant personal branding.
 
-# Step 3: Install the necessary dependencies.
-npm i
+Animated circular frame with lively purple glow around profile image.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Clear, modern presentation of professional experience in purple glass cards.
 
-**Edit a file directly in GitHub**
+Silk-dark background with purple gradients and accent text.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Responsive scroll-to-top button and smooth section-based navigation.
 
-**Use GitHub Codespaces**
+Accessible color choices, font sizes, and semantic HTML (WCAG friendly).
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Easily extendable with Education, Projects, and Contact sections in the same motif.
 
-## What technologies are used for this project?
+📦 Getting Started
+Clone the repository
 
-This project is built with:
+text
+git clone https://github.com/yourusername/bibekparajuli-portfolio.git
+cd bibekparajuli-portfolio
+Open index.html in your browser.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Replace personal info and image as needed.
 
-## How can I deploy this project?
+❤️ Inspiration & Credits
+Created with passion, creativity, and the AI-driven finesse of Perplexity's code and design suggestions.
+Special thanks to all open-source contributors and UI inspiration from leading digital portfolios.
 
-Simply open [Lovable](https://lovable.dev/projects/2d324025-333f-4a3c-b8a4-97ba89962a6d) and click on Share -> Publish.
+📫 Contact
+Want to connect or discuss collaboration?
 
-## Can I connect a custom domain to my Lovable project?
+Email: parajulibibek275@gmail.com
 
-Yes, you can!
+LinkedIn: bibekprj
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Instagram: bibek__parajuli2
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+“The only limit to success is your own imagination.”
+— Bibek Parajuli
