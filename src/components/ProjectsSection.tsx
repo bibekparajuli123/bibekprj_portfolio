@@ -74,7 +74,8 @@ const ProjectsSection = () => {
                   className="w-full flex items-center justify-center gap-2 p-3 rounded-lg glass-effect hover-glow transition-all text-sm font-medium violet-white-gradient"
                 >
                   <Github className="w-4 h-4" />
-                  View on GitHub
+                  Github
+                  <ExternalLink className="w-4 h-4" />
                 </button>
               </div>
             </div>

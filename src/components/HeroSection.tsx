@@ -1,6 +1,46 @@
 import { ChevronDown } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const HeroSection = () => {
+  const roles = [
+    "Aspiring software engineer",
+    "Java Developer", 
+    "Flutter Developer",
+    "Backend Developer"
+  ];
+  
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState('');
+  const [isTyping, setIsTyping] = useState(true);
+
+  useEffect(() => {
+    const currentRole = roles[currentRoleIndex];
+    let timeout: NodeJS.Timeout;
+
+    if (isTyping) {
+      if (displayedText.length < currentRole.length) {
+        timeout = setTimeout(() => {
+          setDisplayedText(currentRole.slice(0, displayedText.length + 1));
+        }, 100);
+      } else {
+        timeout = setTimeout(() => {
+          setIsTyping(false);
+        }, 2000);
+      }
+    } else {
+      if (displayedText.length > 0) {
+        timeout = setTimeout(() => {
+          setDisplayedText(displayedText.slice(0, -1));
+        }, 50);
+      } else {
+        setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
+        setIsTyping(true);
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayedText, isTyping, currentRoleIndex, roles]);
+
   const scrollToNext = () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
@@ -23,8 +63,9 @@ const HeroSection = () => {
                 </span>
               </h1>
               
-              <p className="text-lg sm:text-xl lg:text-2xl gray-text font-light max-w-2xl mx-auto lg:mx-0">
-                Aspiring software engineer and Java developer.
+              <p className="text-lg sm:text-xl lg:text-2xl gray-text font-light max-w-2xl mx-auto lg:mx-0 h-8">
+                {displayedText}
+                <span className="animate-pulse">|</span>
               </p>
             </div>
 
