@@ -44,7 +44,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="profile-glow w-60 h-60 sm:w-72 sm:h-72 lg:w-80 lg:h-80">
                 <img 
-                  src="/lovable-uploads/ee56a0b5-859e-4872-83ba-0ef2b23cb050.png"
+                  src="/lovable-uploads/715e5d5e-bdde-461b-9ae8-2c33affec62f.png"
                   alt="Bibek Parajuli"
                 />
               </div>

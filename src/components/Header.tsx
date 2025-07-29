@@ -28,12 +28,8 @@ const Header = () => {
       <nav className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="profile-glow w-8 h-8 sm:w-10 sm:h-10">
-            <img
-              src="/lovable-uploads/ee56a0b5-859e-4872-83ba-0ef2b23cb050.png"
-              alt="Profile"
-              className="w-full h-full object-cover"
-            />
+          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-primary to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+            <span className="text-white font-bold text-lg sm:text-xl">B</span>
           </div>
 
           {/* Desktop Navigation */}

@@ -7,21 +7,24 @@ const ProjectsSection = () => {
       tech: "Flutter/Dart",
       date: "June 2025",
       description: "An e-commerce app for traditional Nepali attire, featuring authentication, wishlists, and a custom UI/theme.",
-      github: "#"
+      github: "https://github.com/bibekparajuli123/Poshak",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop"
     },
     {
       title: "Khaja Express - Nepali Food Ordering App", 
       tech: "Flutter/Dart",
       date: "May 2025",
       description: "A food delivery app for browsing and ordering Nepali cuisine, with login/signup, shopping cart, and coupon features.",
-      github: "#"
+      github: "https://github.com/bibekparajuli123/Cuisine_App",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop"
     },
     {
       title: "Car Rental System",
       tech: "Java/OOP", 
       date: "Nov 2024",
       description: "A console-based car rental application applying key Object-Oriented Programming principles like encapsulation, inheritance, and polymorphism.",
-      github: "#"
+      github: "https://github.com/bibekparajuli123/CAR_RENTAL_SYSTEM",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop"
     }
   ];
 
@@ -38,9 +41,13 @@ const ProjectsSection = () => {
               key={index}
               className="fade-in-up glass-effect rounded-2xl overflow-hidden hover-glow group"
             >
-              {/* Project Image Placeholder */}
-              <div className="w-full h-48 sm:h-56 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                <span className="text-gray-500 text-lg font-medium">600 × 400</span>
+              {/* Project Image */}
+              <div className="w-full h-48 sm:h-56 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
 
               {/* Project Content */}

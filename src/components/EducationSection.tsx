@@ -11,7 +11,7 @@ const EducationSection = () => {
       degree: "Computer Science (12th Grade)",
       institution: "Annapurna Model College",
       period: "2020 - 2022",
-      gpa: "GPA 3.22 (12th), 3.8 (11th)",
+      gpa: "GPA 3.22 (12th), 3.95 (11th)",
       type: "secondary"
     },
     {

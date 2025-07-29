@@ -3,7 +3,7 @@ const ExperienceSection = () => {
     {
       title: "US IT Sales Recruiter",
       company: "Excellent Pro Group",
-      period: "Current",
+      period: "May 2025 - Present",
       responsibilities: [
         "Executed full-cycle IT recruitment including bench, C2C/W2 placements",
         "Managed ATS/CRM systems for comprehensive candidate tracking",
