@@ -21,17 +21,17 @@ const HeroSection = () => {
       if (displayedText.length < currentRole.length) {
         timeout = setTimeout(() => {
           setDisplayedText(currentRole.slice(0, displayedText.length + 1));
-        }, 100);
+        }, 70);
       } else {
         timeout = setTimeout(() => {
           setIsTyping(false);
-        }, 2000);
+        }, 1200);
       }
     } else {
       if (displayedText.length > 0) {
         timeout = setTimeout(() => {
           setDisplayedText(displayedText.slice(0, -1));
-        }, 50);
+        }, 30);
       } else {
         setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
         setIsTyping(true);
